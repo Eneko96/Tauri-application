@@ -32,7 +32,7 @@ export default function (props) {
     const theme = {
         colorScheme,
         loader: 'bars',
-        fontFamily: 'Open Sans, sans serif',
+        fontFamily: 'Roboto, Open Sans, sans serif',
     }
 
     // https://mantine.dev/theming/mantine-provider/#styles-on-mantineprovider

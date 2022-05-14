@@ -16,27 +16,27 @@ import { useLocalForage } from './utils';
 import { translations } from './i18n';
 
 // fallback for React Suspense
-import Fallback from './Views/Fallback';
+import Fallback from './Fallback';
 
 // imported views need to be added to `views`
-// import Home from './Views/Home';
-// import About from './Views/About';
-// import CIFInfo from './Views/CIFInfo';
+import Home from './Views/Home';
+import About from './Views/About';
+import CIFInfo from './Views/CIFInfo';
 // if your views are large, you can use lazy loading to reduce the initial load time
 // const Settings = lazy(() => import('./Views/Settings'));
 
 // constants
-const HEADER_TITLE = 'HEADER_TITLE goes here';
-const FOOTER = 'FOOTER goes here';
+const HEADER_TITLE = 'Test Tauri Application';
+const FOOTER = 'Contact with @Eneko96';
 const defualtFooterSeen = {};
 // TODO: footer fetched from online source
 function App() {
   const { t, i18n } = useTranslation();
   // left sidebar
   const views = [
-//     { component: Home, path: '/', exact: true, name: t('Home') },
-//     { component: CIFInfo, path: '/cif-info', name: 'CIF ' + t('Info') },
-//     { component: About, path: '/about', name: t('About') }
+    { component: Home, path: '/', exact: true, name: t('Home') },
+    { component: CIFInfo, path: '/cif-info', name: 'CIF ' + t('Info') },
+    { component: About, path: '/about', name: t('About') }
   ];
 
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();
